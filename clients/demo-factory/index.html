@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex" />
+  <title>Demo Factory — podgląd designu (r2)</title>
+  <style>
+    :root { color-scheme: light; --ink:#0a0a0a; --mute:#5a6270; --rule:#d0d4da; --bg:#f5f6f7; --brand:#ff5c00; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: system-ui, -apple-system, sans-serif; color: var(--ink); background: var(--bg); }
+    header.top { background: #fff; border-bottom: 1px solid var(--rule); padding: 1.25rem 1.5rem; }
+    header.top h1 { margin: 0 0 .25rem; font-size: 1.35rem; }
+    header.top p { margin: 0; color: var(--mute); font-size: .95rem; }
+    main { padding: 1.5rem; max-width: 1400px; margin: 0 auto; }
+    .grid { display: grid; gap: 1.25rem; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
+    .card { background: #fff; border: 1px solid var(--rule); border-radius: 8px; padding: 1rem; display: flex; flex-direction: column; gap: .75rem; }
+    .card.selected { border-color: var(--brand); box-shadow: 0 0 0 2px color-mix(in srgb, var(--brand) 25%, transparent); }
+    .card header { display: flex; align-items: center; justify-content: space-between; gap: .5rem; }
+    .card h2 { margin: 0; font-size: 1.05rem; }
+    .badge { background: var(--brand); color: #fff; font-size: .75rem; padding: .2rem .5rem; border-radius: 999px; }
+    .direction { margin: 0; color: var(--mute); font-size: .85rem; min-height: 2.6em; }
+    .links { display: flex; gap: .75rem; }
+    .links a { color: var(--brand); font-weight: 600; text-decoration: none; }
+    iframe { width: 100%; height: 420px; border: 1px solid var(--rule); border-radius: 4px; background: #fff; }
+    .changelog { margin-top: 2rem; background: #fff; border: 1px solid var(--rule); border-radius: 8px; padding: 1rem 1.25rem; }
+    .changelog h2 { margin: 0 0 .75rem; font-size: 1rem; }
+    .changelog ul { margin: 0; padding-left: 1.1rem; color: var(--mute); }
+    .changelog li { margin: .35rem 0; }
+    .changelog time { font-size: .8rem; opacity: .8; }
+  </style>
+</head>
+<body>
+  <header class="top">
+    <h1>Demo Factory — podgląd designu</h1>
+    <p>Rewizja <strong>r2</strong> · Factory smoke test. Otwórz Desktop/Mobile albo przeglądaj iframe poniżej.</p>
+  </header>
+  <main>
+    <section class="grid">
+      
+      <article class="card">
+        <header>
+          <h2>A — Wariant A</h2>
+          
+        </header>
+        <p class="direction">Clean editorial — generous whitespace, strong typography, photography-first, restrained accents</p>
+        <div class="links">
+          <a href="./A-desktop.html">Desktop</a>
+          <a href="./A-mobile.html">Mobile</a>
+        </div>
+        <iframe title="A desktop" src="./A-desktop.html" loading="lazy"></iframe>
+      </article>
+
+      <article class="card selected">
+        <header>
+          <h2>B — Wariant B</h2>
+          <span class="badge">Wybrany</span>
+        </header>
+        <p class="direction">Bold conversion — high-contrast hero, clear offer cards, prominent CTA bands</p>
+        <div class="links">
+          <a href="./B-desktop.html">Desktop</a>
+          <a href="./B-mobile.html">Mobile</a>
+        </div>
+        <iframe title="B desktop" src="./B-desktop.html" loading="lazy"></iframe>
+      </article>
+
+      <article class="card">
+        <header>
+          <h2>C — Wariant C</h2>
+          
+        </header>
+        <p class="direction">Warm local business — approachable, trust-focused, service cards and social proof</p>
+        <div class="links">
+          <a href="./C-desktop.html">Desktop</a>
+          <a href="./C-mobile.html">Mobile</a>
+        </div>
+        <iframe title="C desktop" src="./C-desktop.html" loading="lazy"></iframe>
+      </article>
+    </section>
+    <section class="changelog">
+      <h2>Changelog</h2>
+      <ul>
+        <li><strong>r2</strong> — Factory smoke test <time>2026-10-18T07:49:24.036Z</time></li>
+<li><strong>r1</strong> — Smoke test variants <time>2026-10-18T07:49:16.173Z</time></li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>
